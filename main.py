@@ -82,11 +82,19 @@ def main():
         numero = input("Digite o numero que deseja converter: ")
         try:
             base_inicial = int(input("Digite a base do numero inserido (2-62): "))
+            if base_inicial < 2 or base_inicial > 62:
+                print("Base inválida! Tente novamente.\n")
+                continue
+
             for c in numero:
                 if c != '-' and c != '.' and c != ',' and DIGITOS_PARA_VALOR[c] >= int(base_inicial):
                     raise ValueError("O numero não é valido para a base escolhida")
 
             base_final = int(input("Digite a base para qual deseja converter (2-62): "))
+            if base_final < 2 or base_final > 62:
+                print("Base inválida! Tente novamente.\n")
+                continue
+
             print(f"Resultado: {base_para_base(numero, base_inicial, base_final)}")
 
             print("\nDeseja realizar outra conversão?")
