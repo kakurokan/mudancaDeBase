@@ -2,6 +2,7 @@ DIGITOS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 # mapa caractere -> valor (ex: 'A' -> 10)
 DIGITOS_PARA_VALOR = {ch: i for i, ch in enumerate(DIGITOS)}
 
+
 def para_decimal_fracionario(fracao, base_inicial):
     # converte a parte após a fracionaria (string) para um número decimal
     soma = 0
@@ -112,5 +113,5 @@ def main():
 
     print("Obrigado por usar o conversor de bases numéricas!")
 
-main()
 
+main()
