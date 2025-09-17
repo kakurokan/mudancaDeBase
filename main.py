@@ -76,8 +76,6 @@ def base_para_base(numero, base_inicial, base_final):
 
 
 def main():
-    print(DIGITOS_PARA_VALOR)
-
     is_running = True
     while is_running:
         print("*****************************************************")

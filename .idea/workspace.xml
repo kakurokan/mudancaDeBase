@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ce2f791-1163-4d14-9b88-c43519f67f99" name="Changes" comment="Adicionada verificação">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="6ce2f791-1163-4d14-9b88-c43519f67f99" name="Changes" comment="Adicionada comentários" />
     <list id="8303b0ed-5f4b-45e0-9040-e560633ac924" name="Changes by cris" comment="" />
     <list id="fddb3c9e-e9e3-4805-8ccb-18cf9f9d4696" name="Changes by PC" comment="" />
     <list id="0e2b782a-bd27-4b0e-860b-ea92a171bb97" name="Changes by User" comment="" />
@@ -110,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758109854004</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adicionada comentários">
+      <option name="closed" value="true" />
+      <created>1758125895166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758125895166</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +124,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primeiro commit" />
     <MESSAGE value="Adicionada verificação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionada verificação" />
+    <MESSAGE value="Adicionada comentários" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionada comentários" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -133,6 +139,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Trabalho1$main.coverage" NAME="main Coverage Results" MODIFIED="1758025153126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Trabalho1$main.coverage" NAME="main Coverage Results" MODIFIED="1758125834065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
