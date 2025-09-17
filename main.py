@@ -1,18 +1,19 @@
 DIGITOS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+# mapa caractere -> valor (ex: 'A' -> 10)
 DIGITOS_PARA_VALOR = {ch: i for i, ch in enumerate(DIGITOS)}
 
 def para_decimal_fracionario(fracao, base_inicial):
+    # converte a parte após a fracionaria (string) para um número decimal
     soma = 0
-
-    pot = base_inicial
+    pot = base_inicial  # denominador inicial = base^1
     for d in fracao:
         soma += DIGITOS_PARA_VALOR[d] / pot
         pot *= base_inicial
-
     return soma
 
 
 def para_decimal_inteiro(numero, base_inicial):
+    # converte a parte inteira (string) para um inteiro decimal
     soma = 0
     n = len(numero)
     i = 1
@@ -23,16 +24,18 @@ def para_decimal_inteiro(numero, base_inicial):
 
 
 def decimal_base_fracionario(fracao, base_final):
+    # converte uma fração decimal (0 <= fracao < 1) para a base desejada
+    # limita a 8 dígitos para não ficar em loop eterno
     resultado = ""
-    while fracao > 0 and len(resultado) < 8:  # Limitar a 8 dígitos para evitar loops infinitos
+    while fracao > 0 and len(resultado) < 8:
         fracao *= base_final
         resultado += DIGITOS[int(fracao)]
         fracao -= int(fracao)
-
     return resultado
 
 
-def decimal_base_inteiro(numero, base_final):  # De decimal para qualquer outra base
+def decimal_base_inteiro(numero, base_final):
+    # converte um inteiro decimal para a base desejada (recursivo)
     resto = numero % base_final
     quociente = numero // base_final
     if quociente >= base_final:
@@ -44,6 +47,8 @@ def decimal_base_inteiro(numero, base_final):  # De decimal para qualquer outra 
 
 
 def base_para_base(numero, base_inicial, base_final):
+    # converte uma string 'numero' de base_inicial para base_final
+    # aceita sinal '-' e separador '.' ou ','
     if numero == "0":
         return 0
 
@@ -73,7 +78,6 @@ def main():
     print(DIGITOS_PARA_VALOR)
 
     is_running = True
-
     while is_running:
         print("*****************************************************")
         print("Bem vindo ao sistema de conversão de bases numéricas!")
@@ -86,6 +90,7 @@ def main():
                 print("Base inválida! Tente novamente.\n")
                 continue
 
+            # valida dígitos (simples)
             for c in numero:
                 if c != '-' and c != '.' and c != ',' and DIGITOS_PARA_VALOR[c] >= int(base_inicial):
                     raise ValueError("O numero não é valido para a base escolhida")
@@ -107,5 +112,5 @@ def main():
 
     print("Obrigado por usar o conversor de bases numéricas!")
 
-
 main()
+
