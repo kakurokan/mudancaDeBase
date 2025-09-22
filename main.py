@@ -51,12 +51,13 @@ def base_para_base(numero, base_inicial, base_final):
     # converte uma string 'numero' de base_inicial para base_final
     # aceita sinal '-' e separador '.' ou ','
     if numero == "0":
-        return 0
+        return "0"
 
     complemento = ""
     if numero[0] == '-':
         numero = numero[1:]
-        complemento = '-'
+        if int(numero) != 0:
+            complemento = '-'
 
     if '.' in numero:
         inteiro, frac = numero.split(".")
@@ -70,7 +71,8 @@ def base_para_base(numero, base_inicial, base_final):
     if frac:
         frac_decimal = para_decimal_fracionario(frac, base_inicial)
         frac_final = decimal_base_fracionario(frac_decimal, base_final)
-        return complemento + str(inteiro_final) + '.' + str(frac_final)
+        if frac_final:
+            return complemento + str(inteiro_final) + '.' + str(frac_final)
 
     return complemento + str(inteiro_final)
 
